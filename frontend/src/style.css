@@ -1,0 +1,55 @@
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#182620;background:#f4f5f1;line-height:1.5;--muted:#4d6259;--green:#1e503d;--line:#dce4de}
+*{box-sizing:border-box}
+body{margin:0}
+button,textarea{font:inherit}
+button{cursor:pointer}
+button:disabled{cursor:not-allowed;opacity:.55}
+button,a,textarea{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:3px solid #398b6e;outline-offset:3px}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:15px clamp(15px,5vw,62px);background:#fbfcf9;border-bottom:1px solid var(--line);gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;font-size:1.25rem;font-weight:800;line-height:1.05}
+.brand small{display:block;letter-spacing:.12em;font-size:.58rem;color:var(--muted);margin-top:4px}
+.mark{background:#194735;color:#def8a7;border-radius:11px;width:37px;height:37px;display:grid;place-items:center}
+.actions{display:flex;align-items:center;gap:13px}
+.health{font-size:.79rem;color:var(--muted);display:flex;gap:6px;align-items:center}
+.health i{width:8px;height:8px;background:#9f631f;border-radius:99px}
+.health i.on{background:#258157}
+.new{color:var(--green);font-weight:700;background:white;border:1px solid var(--line);border-radius:9px;padding:7px 10px;white-space:nowrap}
+.layout{width:min(1090px,100%);margin:auto;display:grid;grid-template-columns:230px minmax(0,1fr);align-items:start;gap:20px;padding:28px 18px}
+.sidebar,.chat{background:#fbfcfa;border:1px solid var(--line);border-radius:18px}
+.sidebar{padding:17px;min-width:0}
+.eyebrow{font-size:.69rem;font-weight:800;letter-spacing:.14em;color:#306048;margin:0 0 7px}
+.sidebar h2{font-size:1rem;margin:0 0 15px}
+.sidebar label{display:block;font-size:.83rem;font-weight:700;margin-bottom:6px}
+textarea{border:1px solid var(--line);border-radius:9px;padding:9px 10px;background:white;color:inherit;resize:vertical;width:100%}
+.sidebar textarea{font-size:.82rem}
+.annotation,.tip{font-size:.72rem;color:var(--muted)}
+.sidebar hr{border:0;border-top:1px solid var(--line);margin:16px 0}
+.sidebar code{display:block;font-size:.67rem;overflow-wrap:anywhere;background:#eef3ee;padding:6px;border-radius:6px}
+.privacy{margin-bottom:0}
+.chat{padding:clamp(12px,3vw,24px);min-width:0}
+.conversation{height:clamp(300px,60vh,700px);overflow:auto;display:flex;flex-direction:column;gap:12px;padding:3px 4px;scrollbar-width:thin}
+.conversation>*{flex-shrink:0}
+.intro{margin:auto 0;padding:11px clamp(0px,3vw,22px);max-width:585px}
+.intro h1{margin:0;font-size:clamp(1.65rem,4vw,3.25rem);line-height:1.04;letter-spacing:-.055em}
+.intro>p:not(.eyebrow){color:var(--muted);max-width:36rem;font-size:.95rem}
+.suggestions{display:grid;gap:6px;margin-top:14px}
+.suggestions button{background:#f1f5ee;text-align:left;border:1px solid var(--line);border-radius:9px;color:var(--green);display:flex;justify-content:space-between;gap:8px;padding:7px 10px;font-size:.81rem}
+.suggestions button:hover,.new:hover{background:#e5efe4}
+.message,.error{border-radius:13px;padding:11px 13px;max-width:100%}
+.message h3{margin:0 0 4px;font-size:.73rem;color:var(--green)}
+.user{align-self:flex-end;background:#eaf2e3;max-width:85%}
+.assistant{align-self:flex-start;background:#fff;border:1px solid var(--line)}
+.reply{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.94rem}
+.metrics{display:flex;flex-wrap:wrap;gap:8px 15px;margin:10px 0 0;padding:8px 0 0;border-top:1px solid var(--line)}
+.metrics dt{font-size:.64rem;color:var(--muted)}
+.metrics dd{margin:0;font-size:.73rem;font-weight:700;overflow-wrap:anywhere}
+.metrics .cached{color:#267044}
+.error{background:#fff1ee;color:#862e22;font-size:.86rem}
+.pending{font-size:.84rem;color:var(--muted)}
+.composer{display:flex;align-items:flex-end;gap:8px;border-top:1px solid var(--line);padding-top:13px;margin-top:8px}
+.composer button{border:0;border-radius:10px;background:#194735;color:#fff;padding:10px 14px;font-weight:700}
+.composer button span{margin-left:3px}
+.tip{margin:6px 0 0}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:700px){.layout{grid-template-columns:minmax(0,1fr);gap:10px;padding:12px}.sidebar{order:1}.conversation{height:60vh}.health{font-size:.7rem}.actions{gap:7px}}
